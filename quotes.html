@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+"The only way to do great work is to love what you do. — Steve Jobs",
+"Innovation distinguishes between a leader and a follower. — Steve Jobs",
+"It’s not about ideas. It’s about making ideas happen. — Scott Belsky",
+"Your most unhappy customers are your greatest source of learning. — Bill Gates",
+"The best way to predict the future is to invent it. — Alan Kay",
+"Information technology and business are becoming inextricably interwoven. I don’t think anybody can talk meaningfully about one without talking about the other. — Bill Gates",
+"Don’t let the noise of others’ opinions drown out your own inner voice. — Steve Jobs",
+"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. — Albert Schweitzer",
+"Technology is best when it brings people together. — Matt Mullenweg",
+"In the end, a vision without the ability to execute it is probably a hallucination. — Steve Case",
+"You can worry about the competition…or you can focus on what’s ahead of you and drive fast. — Jack Dorsey",
+"If you think it’s expensive to hire a talented employee, wait till you hire an untalented one. — Shane Parrish",
+"There are only three measurements that tell you nearly everything you need to know about your organization’s overall performance: employee engagement, customer satisfaction, and cash flow. — Jack Welch",
+"The quickest way to ruin the productivity of a small company is to have it adopt the practices of a large company. — David Heinemeier Hansson",
+"What would you do if you weren’t afraid? — Sheryl Sandberg",
+"Don’t find customers for your products, find products for your customers. — Seth Godin",
+"There is no sport as competitive as business. It’s 24 by 7 by 365 by forever. — Mark Cuban",
+"The creation of a thousand forests is in one acorn. — Ralph Waldo Emerson",
+"A business that makes nothing but money is a poor business. — Henry Ford",
+"I learned to go into business only with people whom I like, trust, and admire. — Warren Buffett",
+"We don’t do unnecessary things at Berkshire. And there are many things at big companies that are unnecessary. — Warren Buffett",
+"I insist on a lot of time being spent, almost every day, to just sit and think. That is very uncommon in American business. — Warren Buffett",
+"When you work on something, if you fall in love with it, that’s a good sign. If you do, others will. — Elon Musk",
+"You have to be burning with an idea, or a problem, or a wrong that you want to right. If you’re not passionate enough from the start, you’ll never stick it out. — Steve Jobs",
+"If you are willing to work hard and ask lots of questions, you can learn business pretty fast. — Steve Jobs",
+"My model for business is The Beatles. They were four guys who kept each other kind of negative tendencies in check. They balanced each other and the total was greater than the sum of the parts. That’s how I see business: great things in business are never done by one person, they’re done by a team of people. — Steve Jobs",
+"Your most unhappy customers are your greatest source of learning. — Bill Gates",
+"Talent wins games, but teamwork and intelligence win championships. — Michael Jordan",
+"All business depends upon men fulfilling their responsibilities. — Mahatma Gandhi",
+"Please think about your legacy, because you’re writing it every day. — Gary Vaynerchuk",
+"I’m not a businessman, I’m a business, man. — Jay Z",
+"There is only one boss: the customer. And he can fire everybody in the company, from the chairman on down, simply by spending his money somewhere else. — Sam Walton",
+"Corporation: An ingenious device for obtaining profit without individual responsibility. — Ambrose Bierce",
+"If you are not willing to risk the unusual, you will have to settle for the ordinary. — Jim Rohn",
+"Your brand is what people say about you when you’re not in the room. — Jeff Bezos",
+"We don’t make movies to make money, we make money to make more movies. — Walt Disney",
+"Product is king. — Jack Butcher",
+"Serve, don’t lead. — Kobe Bryant",
+"To dominate, iterate. — Jack Butcher",
+"Screw it. Let’s do it. — Richard Branson",
+"Think big. Start small. — Seth Godin",
+"Be honest, not flawless. — Maxime Lagacé",
+"Done is better than perfect. — Sheryl Sandberg",
+"Creating space to think is a competitive advantage. — Greg McKeown",
+"90% of strategy is execution. 90% of execution is people. — Thibaut",
+"Luck is not a business model. — Anthony Bourdain",
+"If you want to build a big business, start a small business. — Sahil Lavingia",
+"Easy paths, crowded destinations. — Scott Belsky",
+"Big results require big ambitions. — Heraclitus",
+"Always deliver more than expected. — Larry Page",
+"Build for the obsessed, not the casual. — Brian Norgard",
+"Focus on what matters. — Sam Altman",
+"The last 10% it takes to launch something takes as much energy as the first 90%. — Rob Kalin",
+"I do not know the word ‘quit.’ Either I never did, or I have abolished it. — Susan Butcher",
+"It’s more effective to do something valuable than to hope a logo or name will say it for you. — Jason Cohen",
+"Try not to become a man of success. Rather become a man of value. — Albert Einstein",
+"Far and away the best prize that life offers is the chance to work hard at work worth doing. — Theodore Roosevelt",
+"Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway. — Earl Nightingale",
+"You know, you don’t have to have money to be a successful businessperson. You don’t need a college degree, you just need a lot of common sense backed up by a willingness to work hard. — Farrah Gray",
+"Do not be embarrassed by your failures; learn from them and start again. — Richard Branson",
+"Don’t be distracted by criticism. Remember—the only taste of success some people get is to take a bite out of you. — Zig Ziglar",
+"There are two types of people who will tell you that you cannot make a difference in this world: those who are afraid to try and those who are afraid you will succeed. — Ray Goforth",
+"I failed my way to success. — Thomas Edison",
+"Remember, today is the tomorrow you worried about yesterday. — Dale Carnegie",
+"Yesterday’s home runs don’t win today’s games. — Babe Ruth",
+"To be successful, you have to have your heart in your business, and your business in your heart. — Thomas Watson",
+"If you see a bandwagon, it’s too late. — James Goldsmith",
+"Don’t take too much advice. Most people who have a lot of advice to give—with a few exceptions—generalize whatever they did. Don’t over-analyze everything. I myself have been guilty of over-thinking problems. Just build things and find out if they work. — Ben Silbermann",
+"Sometimes it is the people who no one imagines anything of who do the things that no one can imagine. — Alan Turing",
+"Don’t worry about people stealing your design work. Worry about the day they stop. — Jeffrey Zeldman",
+"All humans are entrepreneurs not because they should start companies but because the will to create is encoded in human DNA. — Reid Hoffman",
+"Wonder what your customer really wants? Ask. Don’t tell. — Lisa Stone",
+"Please think about your legacy, because you’re writing it every day. — Gary Vaynerchuck",
+"Forget past mistakes. Forget failures. Forget everything except what you’re going to do now and do it. — William Durant",
+"There are no secrets to success. It is the result of preparation, hard work and learning from failure. — Colin Powell",
+"I find that the harder I work, the more luck I seem to have. — Thomas Jefferson",
+"Success usually comes to those who are too busy to be looking for it. — Henry David ThCertainly! Here's the complete list of 1000 business and IT-related quotes, formatted for your HTML code.
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
